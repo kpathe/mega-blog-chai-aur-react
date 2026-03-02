@@ -37,11 +37,11 @@ export default function Post() {
       <Container>
         <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
           <img
-            src={appwriteService.getFilePreview(post.featuredImage)}
+            src={appwriteService.getFileUrl(post.featuredImage)}
             alt={post.title}
             className="rounded-xl"
           />
-
+          {console.log(appwriteService.getFileUrl(post.featuredImage))}
           {isAuthor && (
             <div className="absolute right-6 top-6">
               <Link to={`/edit-post/${post.$id}`}>
